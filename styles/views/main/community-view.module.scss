@@ -1,0 +1,68 @@
+@import './../../global/global.module.scss';
+
+$colorFirst: #050F64;
+
+.community {
+    padding: 0 12px;
+    &__titleMain {
+        font-size: 26px;
+        font-weight: 600;
+        background: linear-gradient(120.53deg, #00799F 14.07%, #0088C4 34.09%, #4378C8 58.56%, #5969D2 75.08%);
+        -webkit-background-clip: text; /* Обрезаем фон по тексту */
+        -webkit-text-fill-color: transparent; /* Прозрачный текст */
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    &__block {
+        display: flex;
+        margin-bottom: 16px;
+    }
+    &__title {
+        font-size: 17px;
+        font-weight: 500;
+        background: linear-gradient(120.53deg, #00799F 14.07%, #0088C4 34.09%, #4378C8 58.56%, #5969D2 75.08%);
+        -webkit-background-clip: text; /* Обрезаем фон по тексту */
+        -webkit-text-fill-color: transparent; /* Прозрачный текст */
+        margin-bottom: 12px;
+        min-width: 32%;
+        width: 32%;
+    }
+    &__item {
+        font-size: 18px;
+        text-decoration: underline;
+        color: $colorFirst;
+        margin-bottom: 4px;
+        
+    }
+}
+//ADAPTIVE
+@media screen and (min-width: 768px) {
+    .community {
+        padding-top: 80px;
+        width: 100%;
+        margin: 0 auto;
+        &__item {
+            cursor: pointer;
+            text-decoration: none;
+            transition: $transition;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1366px) {
+    .community {
+        width: 1200px;
+    }
+}
+@media screen and (min-width: 1520px) {
+    .community {
+        width: 1500px;
+    }
+}
+@media screen and (min-width: 1720px) {
+    .community {
+        width: 1700px;
+    }
+}

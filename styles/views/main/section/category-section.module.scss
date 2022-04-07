@@ -1,0 +1,155 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    &__block {
+        width: calc(50% - 2px);
+        height: calc(50vw - 2px);
+        border-radius: 20px;
+        margin: 1px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        &__small {
+            height: calc(25vw - 1px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 1px;
+            border-radius: 20px;
+            position: relative;
+        }
+        &_mini {
+            height: calc(25vw - 2px);
+            position: relative;
+        }
+        &__title {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            background: linear-gradient(120.53deg, rgba(0, 121, 159, 0.69) 14.07%, rgba(0, 136, 196, 0.75) 34.09%, rgba(67, 120, 200, 0.779167) 58.56%, rgba(89, 105, 210, 0.79) 75.08%);
+            -webkit-background-clip: text; /* Обрезаем фон по тексту */
+            -webkit-text-fill-color: transparent; /* Прозрачный текст */
+            font-size: 26px;
+            font-weight: 300;
+            text-transform: uppercase;
+            &_light {
+                position: absolute;
+                bottom: 10px;
+                right: 12px;
+                color: #fff;
+                font-size: 26px;
+                font-weight: 300;
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+            &_specialLight {
+                position: absolute;
+                bottom: 10px;
+                left: 12px;
+                color: #fff;
+                font-size: 19px;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+            &_specialDark {
+                position: absolute;
+                width: 60%;
+                bottom: 12px;
+                right: 12px;
+                color: #003A99;
+                font-size: 19px;
+                font-weight: 300;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            &_specialTopLight {
+                position: absolute;
+                top: 10px;
+                left: 0px;
+                right: 0;
+                color: #fff;
+                font-size: 19px;
+                font-weight: 300;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+}
+.allCategory {
+    text-align: center;
+    color: rgba(122, 143, 255, 1);
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 16px;
+    cursor: pointer;
+    &:hover {
+        color: rgb(81, 107, 255);
+    }
+}
+//ADAPTIVE
+@media screen and (min-width: 768px) {
+    .categories {
+        padding-top: 70px;
+        &__block {
+            width: calc(33.3% - 2px);
+            height: 400px;
+            transition: $transition;
+            cursor: pointer;
+            border-radius: 30px;
+            &:hover {
+                box-shadow: 0 0 4px 4px rgba(0,0,0,0.25);
+            }
+            &_mini {
+                // height: 150px;
+            }
+            &__small {
+                height: 200px;
+                transition: $transition;
+                cursor: pointer;
+                border-radius: 30px;
+                &:hover {
+                    box-shadow: 0 0 4px 4px rgba(0,0,0,0.25);
+                }
+            }
+            &__title {
+                font-size: 32px;
+                font-weight: 500;
+                bottom: auto;
+                top: 10px;
+                &_light {
+                    font-size: 32px;
+                }
+                &_specialLight {
+                    font-size: 28px;
+                }
+                &_specialDark {
+                    font-size: 26px;
+                    width: 40%;
+                }
+                &_specialTopLight {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .allCategory {
+        font-size: 24px;
+        text-decoration: none;
+    }
+}
+// @media screen and (max-width: 1720px) {
+    
+// }
+// @media screen and (max-width: 1520px) {
+    
+// }
+// @media screen and (max-width: 1366px) {
+    
+// }
+
+// @media screen and (max-width: 576px) {
+    
+// }

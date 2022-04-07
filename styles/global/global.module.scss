@@ -1,0 +1,48 @@
+@import './../variables/var-global.module.scss';
+
+.container {
+    width: 1700px;
+    margin: 0 auto;
+    padding: 24px;
+    height: 100%;
+    &__pt {
+        padding-top: 70px;
+    }
+}
+
+
+@media screen and (max-width: 1720px) {
+    .container {
+        width: 1500px;
+    }
+}
+@media screen and (max-width: 1520px) {
+    .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .container {
+        padding: 16px;
+        &__mobile {
+            padding: 0 4px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        &__pt {
+            padding: 0 12px;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0px;
+        &__first {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

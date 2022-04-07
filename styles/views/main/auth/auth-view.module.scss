@@ -1,0 +1,141 @@
+@import './../../../global/global.module.scss';
+
+.auth {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    color: $colorSecond;
+    &__window {
+        width: 100%;
+        background: #f4f4f4;
+        padding: 40px 12px;
+        border-radius: 20px;
+    }
+    &__btn {
+        background: rgba(0, 142, 161, 1);
+        border-radius: 20px;
+        color: #fff;
+        padding: 7px 50px;
+        font-size: 22px;
+        width: fit-content;
+        margin: 0 auto 3px auto;
+    }
+    &__title {
+        background: linear-gradient(120.53deg, #00799F 14.07%, #0088C4 34.09%, #4378C8 58.56%, #5969D2 75.08%);
+        -webkit-background-clip: text; /* Обрезаем фон по тексту */
+        -webkit-text-fill-color: transparent; /* Прозрачный текст */
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    &__forget {
+        font-size: 14px;
+        margin-bottom: 4px;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            text-decoration: underline;
+        }
+        &__text {
+            margin-bottom: 4px;
+        }
+    }
+}
+.input {
+    width: 100%;
+    & input {
+        width: 90%;
+        font-size: 18px;
+        border: none;
+        border-bottom: 1px solid $colorSecond;
+        padding: 7px 20px 7px 40px;
+        margin-bottom: 12px;
+        background: transparent;
+        color: $colorText;
+        font-family: 'Montserrat', serif;
+        &:focus {
+            outline: none;
+            border-color: $colorFirst;
+            color: $colorFirst;
+        }
+    }
+    &__item {
+        position: relative;
+        &__svg {
+            position: absolute;
+            top: 35%;
+            left: 20px;
+            transform: translate(0, -50%);
+            display: flex;
+            & svg {
+                width: 20px;
+                fill: $colorSecond;
+            }
+        }
+        &__error {
+            margin-bottom: 6px;
+            color: rgb(255, 0, 0);
+        }
+        &__eye {
+            position: absolute;
+            top: 35%;
+            right: 25px;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            & svg {
+                width: 20px;
+                fill: $colorSecond;
+            }
+        }
+    }
+}
+.politic {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    &__sprite {
+        margin-right: 12px;
+        & svg {
+            width: 35px;
+        }
+    }
+    &__text {
+        text-align: left;
+        & a {
+            color: $colorFirst;
+            text-decoration: underline;
+        }
+    }
+}
+.auth {
+    padding-top: 90px;
+    &__window {
+        width: 500px;
+        margin: 0 auto;
+    }
+    &__btn {
+        padding: 7px 70px;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            box-shadow: $hover;
+        }
+    }
+    &__register {
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .auth {
+        &__register {
+            padding-top: 0;
+        }
+    }
+}
